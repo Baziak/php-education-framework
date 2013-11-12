@@ -1,12 +1,20 @@
 <?php
-require_once 'application/libs/route.php';
-require_once 'application/libs/view.php';
-require_once 'application/libs/controller.php';
-require_once 'application/libs/registry.php';
 
+require_once 'application/core/View.php';
+
+require_once 'application/core/Registry.php';
+require_once 'application/core/FrontController.php';
+require_once 'application/core/Request.php';
+
+/*
+function __autoload($file) {
+    include $file .'.php';
+}
+*/
 
 try{
-    Route::start();
+     $req=new Request();
+     FrontController::dispatch($req);
 }catch (Exception $e){
     $e->getMessage();
 }

@@ -13,10 +13,7 @@ class FrontController{
         if (file_exists($controller_file)){
             require_once ($controller_file);
         }else{
-            echo "file not found"."\n".$controller_file;
-            echo  "MY   ".$module."\n";
-            echo  "CON   ".$controller."\n";
-            echo  "AA   ".$action."\n";
+            echo "file not found";
         }
 
         if (class_exists($controller_class)){

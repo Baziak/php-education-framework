@@ -1,16 +1,10 @@
 <?php
 
-require_once 'application/core/View.php';
-
-require_once 'application/core/Registry.php';
-require_once 'application/core/FrontController.php';
-require_once 'application/core/Request.php';
-
-/*
 function __autoload($file) {
-    include $file .'.php';
+     $file='application/core/'.$file.'.php';
+     require_once($file);
 }
-*/
+
 
 try{
      $req=new Request();

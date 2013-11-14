@@ -14,6 +14,9 @@ class FrontController{
             require_once ($controller_file);
         }else{
             echo "file not found";
+            http_response_code(404);
+            exit;
+
         }
 
         if (class_exists($controller_class)){

@@ -11,4 +11,3 @@ class Registry{
         return Registry::$mass[$key];
     }
 }
-?>

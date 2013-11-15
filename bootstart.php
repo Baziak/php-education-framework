@@ -1,17 +1,9 @@
 <?php
 
+define('DIR', realpath(__DIR__));
+define('DIR_CORE', DIR.'/application/core/');
+define('DIR_MOD', DIR.'/application/modules/');
 function __autoload($file) {
-     $file='application/core/'.$file.'.php';
-     require_once($file);
+     $file=DIR_CORE.$file.'.php';
+     require_once ($file);
 }
-
-
-try{
-     $req=new Request();
-     FrontController::dispatch($req);
-}catch (Exception $e){
-    $e->getMessage();
-}
-
-
-?>

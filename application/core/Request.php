@@ -7,7 +7,7 @@ class Request {
     private $params;
    // private $view;
     function __construct(){
-       $this->parseURI();
+       //$this->parseURI();
     }
     function getController(){
         return $this->controller;

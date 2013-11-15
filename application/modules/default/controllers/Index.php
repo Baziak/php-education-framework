@@ -7,5 +7,3 @@ class IndexController{
         $v->display('home.php');
     }
 }
-
-?>
